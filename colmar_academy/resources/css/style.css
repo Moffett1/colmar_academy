@@ -1,7 +1,130 @@
 body {
-    background-color:yellow;
+    background-color: yellow;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center; }
+    margin: 0;
+    padding: 0
+}
 
-h1 {text-align: center;}
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.name {
+    display: flex;
+    margin-left: 40px;
+}
+
+.header_links {
+    justify-content: flex-end;
+    padding: 0px 10px;
+}
+
+/* main */
+section {
+    display: grid;
+    flex-flow: 1 1 500px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container_one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    flex-basis: calc (50% - 10px);
+    max-width: 100%;
+    height: auto;
+}
+
+.container_one img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.container_two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    object-fit: contain;
+    flex-basis: calc (50% - 10px);
+    max-width: 100%;
+    height: auto;
+}
+
+.container_two h1 {
+    text-align: center;
+}
+
+.container_two h2 {
+    text-align: center;
+}
+
+.container_two button {
+    align-self: center;
+    background-color: blue;
+    padding: 10px 20px;
+   }
+
+/* section two */
+section {
+    display: grid;
+    flex-flow: 1 1 500px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container_three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    flex-basis: calc (50% - 10px);
+    max-width: 100%;
+    height: auto;
+}
+
+.container_three img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.container_four {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    object-fit: contain;
+    flex-basis: calc (50% - 10px);
+    max-width: 100%;
+    height: auto;
+}
+
+.container_four h1 {
+    text-align: center;
+}
+
+.container_four h2 {
+    text-align: center;
+}
+
+.container_four button {
+    align-self: center;
+    background-color: blue;
+    padding: 10px 20px;
+   }
 
