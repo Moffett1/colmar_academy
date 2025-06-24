@@ -1,5 +1,4 @@
 body {
-    background-color: yellow;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0
@@ -31,8 +30,9 @@ nav {
 }
 
 /* main */
-section {
+section_one {
     display: grid;
+    background-color: gray;
     flex-flow: 1 1 500px;
     flex-wrap: wrap;
     flex-direction: column;
@@ -80,17 +80,19 @@ section {
    }
 
 /* section two */
-section {
+section_two {
     display: grid;
+    background-color: white;
     flex-flow: 1 1 500px;
     flex-wrap: wrap;
     flex-direction: column;
     grid-template-columns: 1fr 1fr;
+    height: fit-content;
 }
 
 .container_three {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     object-fit: contain;
     flex-basis: calc (50% - 10px);
@@ -99,32 +101,91 @@ section {
 }
 
 .container_three img {
+    margin-top: 16px;
     max-width: 100%;
-    height: auto;
     object-fit: contain;
 }
 
 .container_four {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     object-fit: contain;
     flex-basis: calc (50% - 10px);
-    max-width: 100%;
-    height: auto;
-}
-
-.container_four h1 {
+    max-width: 100%;}
+   
+.container_four img {
+   margin-left: 16px;
+   margin-bottom: 16px; 
+   max-width: 30%;
+   max-height: 30%;
+   object-fit: contain;
+   height: fit-content;
+   }   
+    
+.container_four p {
     text-align: center;
-}
+}    
 
-.container_four h2 {
+.content_four
+    {flex-grow: 1;}
+
+  /* section three */
+  
+
+  .section_three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    } 
+
+    .sthree {
+    box-sizing: border-box;    
+    border: 1px solid black; 
+    justify-items: center;
+    background-color: gray;  
+    }
+
+
+    .section_three img {
+ justify-items: center;
+  }
+
+.section_three_h1 {
     text-align: center;
+    color: brown;
 }
 
-.container_four button {
-    align-self: center;
-    background-color: blue;
-    padding: 10px 20px;
-   }
+/* section four */
+
+ .section_four {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1fr 1fr 1fr);
+    grid-template-rows: auto auto;
+    } 
+
+<div class="sthree">
+
+
+  .section_four img {
+  display: flex; 
+  flex: 0 0; 
+  max-width: 33.33%;
+  box-sizing: border-box;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.p {
+    text-align: center;
+    color: brown;
+}
+
+
+  
+    
 
