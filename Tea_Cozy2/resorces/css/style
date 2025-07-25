@@ -1,0 +1,64 @@
+body {
+font-family: Helvetica, sans-serif;
+font-size: 22px;
+color: seashell;
+background-color: black;}
+
+.header {
+ display: flex;
+ height: 69px;
+ justify-content: space-between;
+ align-items: center;
+ margin-left: 10px;
+ font-family: cursive;
+ border-bottom: 1px solid seashell;
+ border-width: auto;
+ }
+
+.header img {
+  
+ max-height: 50px;    
+} 
+ 
+.navigation {
+display: flex;    
+}
+
+/* Mission */
+
+.ourmission {
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 500px;    
+height: auto;    
+background-image: url('..//images/img-mission-background.jpg'); 
+background-position: center;
+background-size: cover;
+overflow: hidden;  
+}
+
+.stripe {
+  display: flex;
+  justify-content: center;
+  justify-items: center;  
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  }
+
+.content h1,
+.content h2 
+{
+  color: white;  
+  justify-content: center;
+  justify-items: center; 
+  z-index: 1;
+  text-align: center;
+ }
+
+ 
+
+
+
+
