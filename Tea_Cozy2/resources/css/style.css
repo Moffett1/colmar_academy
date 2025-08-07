@@ -57,6 +57,73 @@ overflow: hidden;
   text-align: center;
  }
 
+/* Tea of the month */
+
+ .teamonth {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  width: 100%;
+  margin-top: 2em;
+  gap: 1em;
+}
+
+.photo {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ }
+
+ .teamonth img {
+  display: flex;
+  max-width: 300px;
+  max-height: 200px;
+  height: auto;
+  }
+
+  .phtext {
+ margin-top: 1em;
+  }
+
+/* Locations */
+
+ .locations {
+  display: flex;
+  margin-top: 2em;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 500px;
+  background-image: url('..//images/img-locations-background.jpg');
+  background-size: cover;
+  background-position: center
+  }
+
+.local {
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-top: 2em;
+background-color: green;
+height: 250px;
+width: 250px;
+}
+
+
+.local h3{
+margin: auto;
+}
+
+
+.local p {
+margin: auto;
+}
+
+
+
+  
+    
+
+
  
 
 
