@@ -6,10 +6,10 @@ background-color: black;}
 
 .header {
  display: flex;
- height: 69px;
  justify-content: space-between;
  align-items: center;
- margin-left: 10px;
+ height: 69px;
+ padding: 0 .75em;
  font-family: cursive;
  border-bottom: 1px solid seashell;
  border-width: auto;
@@ -17,11 +17,40 @@ background-color: black;}
 
 .header img {
   
- max-height: 50px;    
+ max-height: 3.125em;    
 } 
- 
+
 .navigation {
-display: flex;    
+  display: flex;
+  gap: 1.5em;       /* ensures links go across on desktop */
+}
+ 
+.navigation a {
+text-decoration: none;
+color: seashell; 
+font-size: 1rem; 
+transition: color 0;
+gap: 1em;  
+}
+
+.navigation a:hover {
+  color: lightgray;
+}
+
+/* Tablet/mobile: stack or collapse nav */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;         /* allow header to grow */
+    padding: 1em;
+    text-align: center;
+  }
+
+  .navigation {
+    flex-direction: column;
+    margin-top: 0.5em;
+    gap: 1.5em;
+  }
 }
 
 /* Mission */
@@ -48,8 +77,7 @@ overflow: hidden;
   }
 
 .content h1,
-.content h2 
-{
+.content h2 {
   color: white;  
   justify-content: center;
   justify-items: center; 
@@ -59,43 +87,73 @@ overflow: hidden;
 
 /* Tea of the month */
 
- .teamonth {
+.teamonth {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
   width: 100%;
   margin-top: 2em;
   gap: 1em;
 }
 
-.photo {
- display: flex;
- flex-direction: column;
- align-items: center;
- }
+.pair{
+  grid-column: 1 / -1;     /* take full row */
+  display:flex;
+  justify-content:center;   /* center the two photos as a pair */
+  gap:1em;
+}
 
- .teamonth img {
+.photo {
   display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.photo img {
   max-width: 300px;
   max-height: 200px;
   height: auto;
+  display: block;
   }
 
   .phtext {
  margin-top: 1em;
+ text-align: center;
   }
 
-/* Locations */
+  /* Tablet size (2 columns) */
+@media (max-width: 900px) {
+  .teamonth {
+    grid-template-columns: repeat(2, auto);
+  }
+}
 
- .locations {
+/* Mobile size (1 column) */
+@media (max-width: 600px) {
+  .teamonth {
+    grid-template-columns: 1fr;
+  }
+
+  .pair {
+    flex-direction: column;   /* stack the two bottom photos vertically */
+    align-items: center;
+  }
+}
+
+/* locations */
+
+.locations {
   display: flex;
-  margin-top: 2em;
   flex-direction: row;
+  margin-top: 2em;
   justify-content: space-evenly;
+  align-items: center;
+  gap: 1em;
+  margin-top: 2em;
   height: 500px;
   background-image: url('..//images/img-locations-background.jpg');
   background-size: cover;
-  background-position: center
+  background-position: center;
   }
 
 .local {
@@ -103,22 +161,43 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 margin-top: 2em;
-background-color: green;
+background-color: black; 
+border: 2px solid seashell;
 height: 250px;
 width: 250px;
 }
-
 
 .local h3{
 margin: auto;
 }
 
-
 .local p {
 margin: auto;
 }
 
+/* Mobile: stack locations */
+@media (max-width: 768px) {
+  .locations {
+    flex-direction: column;
+    height: auto;         /* let height grow naturally */
+    padding: 2em 0;
+  }
 
+  .local {
+    width: 80%;           /* shrink to fit mobile */
+    max-width: 300px;
+  }
+}
+
+/* Footer */
+
+.footertext {
+  text-align: center;
+}
+
+.footercopy {
+ text-indent: 1.25em; 
+}
 
   
     
